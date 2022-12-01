@@ -15,7 +15,7 @@
 # specific language governing permissions and limitations
 # under the License.
 
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 # Install minimal dependencies required for Impala services to run.
 # liblzo2-2 may be needed by the Impala-lzo plugin, which is used in tests.
