@@ -19,7 +19,7 @@ ENV HIVE_HOME=/opt/hive
 ENV HBASE_HOME=/opt/hbase
 ENV SENTRY_HOME=/opt/sentry
 ENV RANGER_HOME=/opt/ranger
-ENV HADOOP_CONF_DIR=/opt/hadoop/etc/conf
+ENV HADOOP_CONF_DIR=/opt/hadoop/etc/hadoop
 
 ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
 ENV PATH="${PATH}:${HADOOP_HOME}/bin:${HADOOP_HOME}/sbin:${HIVE_HOME}/bin:${HBASE_HOME}/bin:${SENTRY_HOME}/bin:${RANGER_HOME}/bin"
