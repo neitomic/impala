@@ -7,7 +7,7 @@ export JAVA_HOME=$(which java | xargs readlink -f | sed "s:/bin/java::")
 HADOOP_DATA_DIR="/var/lib/hadoop"
 HADOOP_LOG_DIR="$HADOOP_DATA_DIR/logs"
 HIVE_DATA_DIR="/var/lib/hive"
-HIVE_LOG_DIR="$DATA_DIR/logs"
+HIVE_LOG_DIR="$HIVE_DATA_DIR/logs"
 
 export HMS_DBTYPE=${HMS_DBTYPE:-derby}
 

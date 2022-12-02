@@ -23,4 +23,4 @@ docker build -t $IMAGE_NAME --build-arg CONTEXT_DIR=./build_context .
 echo "Cleanup build context"
 rm -rf ./build_context
 
-echo "Done. The image is built with name ${IMAGE_NAME}.
+echo "Done. The image is built with name ${IMAGE_NAME}."
