@@ -18,6 +18,9 @@ cp -r $RANGER_HOME ./build_context/ranger
 echo "Add hadoop-lzo at ${HADOOP_LZO} to build context"
 cp -r $HADOOP_LZO ./build_context/hadoop-lzo
 
+echo "Prepare JDBC Driver from ${POSTGRES_JDBC_DRIVER} to build context"
+cp ${POSTGRES_JDBC_DRIVER} ./build_context/hive/lib/
+
 docker build -t $IMAGE_NAME --build-arg CONTEXT_DIR=./build_context .
 
 echo "Cleanup build context"
