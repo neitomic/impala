@@ -44,10 +44,10 @@ function run_history_server() {
   exec $HADOOP_HOME/bin/mapred historyserver
 }
 
-
 function run_hive_metastore() {
-  # If the derby files do not exist, then initialize the schema.
+  # Initialize the schema if it's not initialized.
   if [ ! -f "${HIVE_DATA_DIR}/metastore_initialized" ]; then
+    echo "Initializing Hive Metastore Schema with DB Type $HMS_DBTYPE..."
     $HIVE_HOME/bin/schematool -dbType $HMS_DBTYPE -initSchema
     touch ${HIVE_DATA_DIR}/metastore_initialized
   fi
