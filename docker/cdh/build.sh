@@ -11,12 +11,6 @@ echo "Add hadoop at ${HADOOP_HOME} to build context"
 cp -r $HADOOP_HOME ./build_context/hadoop
 echo "Add hive at ${HIVE_HOME} to build context"
 cp -r $HIVE_HOME ./build_context/hive
-echo "Add sentry at ${SENTRY_HOME} to build context"
-cp -r $SENTRY_HOME ./build_context/sentry
-echo "Add ranger at ${RANGER_HOME} to build context"
-cp -r $RANGER_HOME ./build_context/ranger
-echo "Add hadoop-lzo at ${HADOOP_LZO} to build context"
-cp -r $HADOOP_LZO ./build_context/hadoop-lzo
 
 echo "Prepare JDBC Driver from ${POSTGRES_JDBC_DRIVER} to build context"
 cp ${POSTGRES_JDBC_DRIVER} ./build_context/hive/lib/
