@@ -1,15 +1,15 @@
-FROM ubuntu:18.04
+FROM ubuntu:22.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Etc/UTC
 RUN apt-get update && \
-apt-get install -y python3.8 openjdk-8-jre-headless \
-libsasl2-2 libsasl2-modules libsasl2-modules-gssapi-mit \
-sudo netcat-openbsd less curl wget iproute2 vim iputils-ping \
-tzdata liblzo2-2 krb5-user && \
-apt-get clean && \
-rm -rf /var/lib/apt/lists/* && \
-update-alternatives --install /usr/bin/python python  /usr/bin/python3.8 1
+  apt-get install -y python3.10 openjdk-8-jre-headless \
+  libsasl2-2 libsasl2-modules libsasl2-modules-gssapi-mit \
+  sudo netcat-openbsd less curl wget iproute2 vim iputils-ping \
+  tzdata liblzo2-2 krb5-user && \
+  apt-get clean && \
+  rm -rf /var/lib/apt/lists/* && \
+  update-alternatives --install /usr/bin/python python  /usr/bin/python3.10 1
 
 USER root
 ARG CONTEXT_DIR
